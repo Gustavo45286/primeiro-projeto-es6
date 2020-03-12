@@ -35,9 +35,47 @@ var exibirMensagem2 = function (){
 
     }
 
-    console.log(escopoBloco);
-    console.log(escopoFuncao);
+    //console.log(escopoBloco);
+    //console.log(escopoFuncao);
 }
 
 exibirMensagem2();
 //fsdgtrs
+
+const array = [1,3,4,5,8,9];
+console.log(array);
+
+//percorre o vetor e executa determinada função para ele
+const novoArray = array.map(function(item , index){
+    return item *2;
+});
+
+console.log(novoArray);
+
+
+//reduce: consumir todo o vetor e trasnformar uma unica informação
+const soma = array.reduce(function(total, proximoValor){
+    return total+proximoValor;
+});
+
+console.log(soma);
+
+//filter: filtrar somente os pares
+const filterPares = array.filter(function(item){
+    return item %2 ===0;
+});
+
+console.log(filterPares)
+
+const usuarios=[
+    {nome: 'usuario1', idade: 10},
+    {nome: 'usuario2', idade: 15},
+    {nome: 'usuario3', idade: 20},
+]
+
+const novosUsuarios = usuarios.filter(function(usuario){
+    return usuario.idade >= 15;
+});
+
+console.log(novosUsuarios);
+    
